@@ -5,6 +5,8 @@ import 'package:flutteraula1/Exercicio1/Exercicio3.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio4.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio5.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio6.dart';
+import 'package:flutteraula1/Exercicio1/Exercicio7.dart';
+import 'package:flutteraula1/Exercicio1/TesteList.dart';
 import 'package:flutteraula1/Screens/home.dart';
 
 void main() {
