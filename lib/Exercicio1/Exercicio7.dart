@@ -22,8 +22,18 @@ class _Exercicio7State extends State<Exercicio7> {
         itemCount: listaDeConvidados.length,
         itemBuilder: (context, index) {
           final guest = listaDeConvidados[index];
-          return ListTile(
-            title: Text(guest),
+          return TextButton(
+            onPressed: () {
+              print('Botão pressionado: $guest');
+              // Lógica a ser executada ao pressionar o botão
+            },
+            child: Row(
+              children: [
+                Icon(Icons.person_search_sharp),
+                SizedBox(width: 8), // Espaçamento entre o ícone e o texto
+                Text(guest),
+              ],
+            ),
           );
         },
       ),
