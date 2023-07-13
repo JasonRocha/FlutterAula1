@@ -42,7 +42,7 @@ class _Exercicio8State extends State<Exercicio8> {
                       ),
                     ),
                   ),
-                  ElevatedButton(
+                  TextButton(
                     onPressed: () {
                       setState(() {
                         String novaTarefa = adicionarTarefa.text.trim();

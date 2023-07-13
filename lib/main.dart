@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Exercicio7(),
+      home: Exercicio8(),
     );
   }
 }
