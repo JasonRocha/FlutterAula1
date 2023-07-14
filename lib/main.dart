@@ -9,6 +9,8 @@ import 'package:flutteraula1/Exercicio1/Exercicio5.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio6.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio7.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio8.dart';
+import 'package:flutteraula1/Exercicio1/Telas/Exercicio10_1.dart';
+import 'package:flutteraula1/Exercicio1/Telas/Exercicio9.dart';
 import 'package:flutteraula1/Exercicio1/TesteCheckBoxListTile.dart';
 import 'package:flutteraula1/Exercicio1/TesteList.dart';
 import 'package:flutteraula1/Exercicio1/exemploTextField.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Exercicio8(),
+      home: Exercicio10_1(),
     );
   }
 }

@@ -65,6 +65,8 @@ flutter:
     - lib/images/download.jfif
     - lib/images/arvore-de-natal-imagem-animada-0333.gif
     - lib/images/giphy.gif
+    - lib/images/cristiano-ronaldo-drinking.gif
+    - lib/images/triangulo-fritando.gif
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

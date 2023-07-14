@@ -61,19 +61,31 @@ class _Exercicio8State extends State<Exercicio8> {
               Expanded(
                 child: ListView(
                   shrinkWrap: true,
-                  children: listaDeTarefa.map((tarefa) {
-                    return ListTile(
+                  children: listaDeTarefa.map(
+                    (tarefa) {
+                      return ListTile(
                         leading: Icon(Icons.menu_book_sharp),
-                        title: Text(tarefa),
+                        title: Text(
+                          tarefa,
+                          style: TextStyle(
+                            color: tarefasSelecionadas[tarefa] == true
+                                ? Colors.grey
+                                : Colors.black,
+                          ),
+                        ),
                         trailing: Checkbox(
                           value: tarefasSelecionadas[tarefa] ?? false,
                           onChanged: (value) {
-                            setState(() {
-                              tarefasSelecionadas[tarefa] = value!;
-                            });
+                            setState(
+                              () {
+                                tarefasSelecionadas[tarefa] = value!;
+                              },
+                            );
                           },
-                        ));
-                  }).toList(),
+                        ),
+                      );
+                    },
+                  ).toList(),
                 ),
               ),
             ],
