@@ -9,6 +9,7 @@ import 'package:flutteraula1/Exercicio1/Exercicio5.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio6.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio7.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio8.dart';
+import 'package:flutteraula1/Exercicio1/Telas/Exercicio11.dart';
 import 'package:flutteraula1/Exercicio1/Telas/Exercicio10_1.dart';
 import 'package:flutteraula1/Exercicio1/Telas/Exercicio9.dart';
 import 'package:flutteraula1/Exercicio1/TesteCheckBoxListTile.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Exercicio10_1(),
+      home: Exercicio11(),
     );
   }
 }
