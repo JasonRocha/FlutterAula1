@@ -16,6 +16,7 @@ import 'package:flutteraula1/Exercicio1/TesteCheckBoxListTile.dart';
 import 'package:flutteraula1/Exercicio1/TesteList.dart';
 import 'package:flutteraula1/Exercicio1/exemploTextField.dart';
 import 'package:flutteraula1/Screens/home.dart';
+import 'package:flutteraula1/criando_Widgets/TesteWidget.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Exercicio11(),
+      home: TesteWidget(),
     );
   }
 }

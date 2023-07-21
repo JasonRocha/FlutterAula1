@@ -1,14 +1,15 @@
-import 'dart:ffi';
-
 class ProductModel {
   String nome;
   int valor;
   String fabricante;
-  String unidadeMedida;
+  String descricao;
+  String fotoProduto;
 
-  ProductModel(
-      {required this.fabricante,
-      required this.nome,
-      required this.unidadeMedida,
-      required this.valor});
+  ProductModel({
+    required this.fabricante,
+    required this.nome,
+    required this.descricao,
+    required this.valor,
+    required this.fotoProduto,
+  });
 }

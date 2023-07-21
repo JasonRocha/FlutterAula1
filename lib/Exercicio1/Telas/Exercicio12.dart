@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:flutteraula1/Exercicio1/Telas/telaDeConfirmacao.dart';
@@ -55,10 +55,8 @@ class _Exercicio12State extends State<Exercicio12> {
                         convidados.removeAt(index);
                       });
                     }
-
                     print("Recebi resposta do método");
                   });
-
                   print("Acabou de executar o botão");
                 },
               ),

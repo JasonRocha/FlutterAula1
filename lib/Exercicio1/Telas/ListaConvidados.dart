@@ -1,5 +1,3 @@
-// No arquivo 'ListaConvidados.dart'
-
 class ListaConvidados {
   final String nome;
 
