@@ -64,11 +64,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/images/images.png
-    - lib/images/download.jfif
-    - lib/images/arvore-de-natal-imagem-animada-0333.gif
-    - lib/images/giphy.gif
-    - lib/images/cristiano-ronaldo-drinking.gif
-    - lib/images/triangulo-fritando.gif
+    - lib/Exercicio14/Imagens/Delirium Nocturnum.jpg
+    - lib/Exercicio14/Imagens/DeliriumTremens.jpg
+    - lib/Exercicio14/Imagens/Guinnes.jpg
+    - lib/Exercicio14/Imagens/Karmeliet.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
