@@ -5,7 +5,7 @@ class ProductModel {
   String fabricante;
   String descricao;
   String fotoProduto;
-  late String estilo;
+  String estilo;
   late String coloracao;
   late String amargor;
   late String aromas;
@@ -17,10 +17,10 @@ class ProductModel {
     required this.fabricante,
     required this.descricao,
     required this.fotoProduto,
-    estilo,
+    required this.estilo,
     coloracao,
     amargor,
     aromas,
     copoSugerido,
   });
-  }
+}
