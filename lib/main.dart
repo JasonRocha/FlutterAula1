@@ -22,7 +22,7 @@ import 'package:flutteraula1/Screens/home.dart';
 import 'package:flutteraula1/criando_Widgets/TesteWidget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: TelaProduto(),
       debugShowCheckedModeBanner: false,
     );
