@@ -1,6 +1,9 @@
 // ignore_for_file: unused_import, unused_label
 
 import 'package:flutter/material.dart';
+import 'package:flutteraula1/Animacoes/Exercicio2.dart';
+import 'package:flutteraula1/Animacoes/Exercicioanimado.dart';
+import 'package:flutteraula1/ExemploProfessor/exercicio1.dart';
 
 import 'package:flutteraula1/Exercicio1/Exercicio1.dart';
 import 'package:flutteraula1/Exercicio1/Exercicio2.dart';
@@ -18,7 +21,6 @@ import 'package:flutteraula1/Exercicio1/TesteList.dart';
 import 'package:flutteraula1/Exercicio1/exemploTextField.dart';
 import 'package:flutteraula1/Exercicio14/Tela/TelaProduto.dart';
 import 'package:flutteraula1/Exercicio14/Widget/AppBarCustom.dart';
-import 'package:flutteraula1/Screens/home.dart';
 import 'package:flutteraula1/criando_Widgets/TesteWidget.dart';
 
 void main() {
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: TelaProduto(),
+      home: Exercicio2(),
       debugShowCheckedModeBanner: false,
     );
   }
