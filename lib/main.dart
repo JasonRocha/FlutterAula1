@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutteraula1/Animacoes/Exercicio2.dart';
 import 'package:flutteraula1/Animacoes/Exercicioanimado.dart';
+import 'package:flutteraula1/AnimacoesExercicio/TelaInicial.dart';
 import 'package:flutteraula1/ExemploProfessor/exercicio1.dart';
 
 import 'package:flutteraula1/Exercicio1/Exercicio1.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Exercicio2(),
+      home: TelaInicial(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -13,11 +13,14 @@ class bottao extends AnimatedWidget {
     Animation<double> animation = this.listenable as Animation<double>;
 
     return Positioned(
-        top: this.top,
         left: animation.value,
         child: Container(
           width: 50,
           height: 50,
+          child: Text(
+            'Login',
+            style: TextStyle(fontSize: 15),
+          ),
         ));
   }
 }
