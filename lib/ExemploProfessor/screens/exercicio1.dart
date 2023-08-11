@@ -1,5 +1,5 @@
+import 'package:animacaocontrolada/widgets/animatedCar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutteraula1/ExemploProfessor/widgets/animatedCar.dart';
 
 class Exercicio1 extends StatefulWidget {
   const Exercicio1({super.key});
@@ -8,8 +8,7 @@ class Exercicio1 extends StatefulWidget {
   State<Exercicio1> createState() => _Exercicio1State();
 }
 
-class _Exercicio1State extends State<Exercicio1>
-    with SingleTickerProviderStateMixin {
+class _Exercicio1State extends State<Exercicio1> with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<double> animation;
   late Animation<double> animation2;
@@ -18,16 +17,14 @@ class _Exercicio1State extends State<Exercicio1>
   void initState() {
     super.initState();
 
-    this.animationController =
-        new AnimationController(vsync: this, duration: Duration(seconds: 3));
+    this.animationController = new AnimationController(vsync: this, duration: Duration(seconds: 3));
 
-    this.animation = new Tween<double>(begin: 100, end: 500)
-        .animate(this.animationController);
-    this.animation2 = new Tween<double>(begin: 100, end: 600)
-        .animate(this.animationController);
+    this.animation = new Tween<double>(begin: 100, end: 500).animate(this.animationController);
+    this.animation2 = new Tween<double>(begin: 100, end: 600).animate(this.animationController);
 
     this.animationController.repeat();
   }
+
 
   @override
   void dispose() {
@@ -41,14 +38,21 @@ class _Exercicio1State extends State<Exercicio1>
     print("AnimationController progress: ${this.animationController.value}");
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Carrinho em movimento"),
-        ),
-        body: Stack(
-          children: [
-            AnimatedCar(this.animation, 200),
-            AnimatedCar(this.animation2, 500),
-          ],
-        ));
+      appBar: AppBar(
+        title: Text("Carrinho em movimento"),
+      ),
+      body: Stack(
+        children: [
+          AnimatedCar(
+              this.animation,
+            200
+          ),
+          AnimatedCar(
+              this.animation2,
+              500
+          ),
+        ],
+      )
+    );
   }
 }
