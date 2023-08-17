@@ -36,79 +36,130 @@ void main() {
 
 }*/
 
-// Interface para os estados
-abstract class VendingMachineState {
-  void insertMoney(int amount);
-  void selectItem(String item);
-  void dispenseItem();
+// Estado 
+abstract class EstadoAparelhoSom {
+  void ligar();
+  void desligar();
+  void reproduzir();
+  void pausar();
 }
 
-// Estados concretos
-class NoMoneyState implements VendingMachineState {
+// Estado Concreto: Desligado
+class EstadoAparelhoSomDesligado implements EstadoAparelhoSom {
   @override
-  void insertMoney(int amount) {
-    print("$amount reais inseridos.");
+  void ligar() {
+    print("Ligando o aparelho de som...");
   }
 
   @override
-  void selectItem(String item) {
-    print("Insira dinheiro primeiro.");
+  void desligar() {
+    print("Desligando o aparelho de som...");
   }
 
   @override
-  void dispenseItem() {
-    print("Nenhum item selecionado e nenhum dinheiro inserido.");
-  }
-}
-
-class HasMoneyState implements VendingMachineState {
-  @override
-  void insertMoney(int amount) {
-    print("$amount reais adicionados ao total.");
+  void reproduzir() {
+    print("Não é possível reproduzir, o aparelho está desligado.");
   }
 
   @override
-  void selectItem(String item) {
-    print("$item selecionado.");
-  }
-
-  @override
-  void dispenseItem() {
-    print("Nenhum item selecionado ou saldo insuficiente.");
+  void pausar() {
+    print("Não é possível pausar, o aparelho está desligado.");
   }
 }
 
-// Classe da máquina de venda automática
-class VendingMachine {
-  VendingMachineState _state = NoMoneyState();
-
-  void setState(VendingMachineState state) {
-    _state = state;
+// Estado Concreto: Modo Pendrive
+class EstadoModoPendrive implements EstadoAparelhoSom {
+  @override
+  void ligar() {
+    print("O aparelho já está ligado no modo Pendrive.");
   }
 
-  void insertMoney(int amount) {
-    _state.insertMoney(amount);
-    if (_state is NoMoneyState) {
-      setState(HasMoneyState());
-    }
+  @override
+  void desligar() {
+    print("Desligando o aparelho do modo Pendrive...");
   }
 
-  void selectItem(String item) {
-    _state.selectItem(item);
-    if (_state is HasMoneyState) {
-      print("Tentando dispensar o item...");
-      _state.dispenseItem();
-      setState(NoMoneyState());
-    }
+  @override
+  void reproduzir() {
+    print("Reproduzindo conteúdo do Pendrive...");
+  }
+
+  @override
+  void pausar() {
+    print("Pausando a reprodução do Pendrive...");
+  }
+}
+
+// Estado Concreto: Modo Rádio
+class EstadoModoRadio implements EstadoAparelhoSom {
+  @override
+  void ligar() {
+    print("O aparelho já está ligado no modo Rádio.");
+  }
+
+  @override
+  void desligar() {
+    print("Desligando o aparelho do modo Rádio...");
+  }
+
+  @override
+  void reproduzir() {
+    print("Sintonizando estação de rádio...");
+  }
+
+  @override
+  void pausar() {
+    print("Não é possível pausar no modo Rádio.");
+  }
+}
+
+// Contexto
+class AparelhoSom {
+  EstadoAparelhoSom estado = EstadoAparelhoSomDesligado();
+
+  void setEstado(EstadoAparelhoSom novoEstado) {
+    estado = novoEstado;
+  }
+
+  void ligar() {
+    estado.ligar();
+  }
+
+  void desligar() {
+    estado.desligar();
+  }
+
+  void reproduzir() {
+    estado.reproduzir();
+  }
+
+  void pausar() {
+    estado.pausar();
+  }
+
+  void ativarModoPendrive() {
+    estado = EstadoModoPendrive();
+  }
+
+  void ativarModoRadio() {
+    estado = EstadoModoRadio();
   }
 }
 
 void main() {
-  var vendingMachine = VendingMachine();
-
-  vendingMachine.insertMoney(0); // Saída: 0 reais inseridos.
-  vendingMachine.selectItem("Coca-Cola"); // Saída: Insira dinheiro primeiro.
-
-  vendingMachine.insertMoney(15); // Saída: 5 reais inseridos.
-  vendingMachine.selectItem("Pepsi"); // Saída: Pepsi selecionado. \n Saída: Nenhum item selecionado ou saldo insuficiente.
+  var aparelho = AparelhoSom();
+  
+  aparelho.ligar();
+  aparelho.reproduzir();
+  aparelho.pausar();
+  
+  aparelho.ativarModoPendrive();
+  aparelho.reproduzir();
+  aparelho.pausar();
+  
+  aparelho.ativarModoRadio();
+  aparelho.reproduzir();
+  aparelho.pausar();
+  
+  aparelho.desligar();
 }
